@@ -1,0 +1,10 @@
+#bg-video {
+  position: fixed;      /* Se queda pegado al fondo */
+  top: 0;
+  left: 0;
+  width: 100vw;         /* 100% del ancho de la ventana */
+  height: 100vh;        /* 100% del alto de la ventana */
+  object-fit: cover;    /* Rellena sin deformarse */
+  z-index: -1;          /* Se queda atrás del contenido */
+}
+<button id="sound-btn">
