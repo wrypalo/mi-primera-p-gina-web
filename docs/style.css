@@ -1,10 +1,38 @@
-#bg-video {
-  position: fixed;      /* Se queda pegado al fondo */
-  top: 0;
-  left: 0;
-  width: 100vw;         /* 100% del ancho de la ventana */
-  height: 100vh;        /* 100% del alto de la ventana */
-  object-fit: cover;    /* Rellena sin deformarse */
-  z-index: -1;          /* Se queda atrás del contenido */
+@font-face {
+    font-family: "Futura";
+    src: url("fonts/Futura.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
 }
-<button id="sound-btn">
+
+body {
+    font-family: "Futura", sans-serif;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;   /* CENTRA horizontalmente el bloque entero */
+  align-items: center;       /* Alinea verticalmente */
+  gap: 30px;
+  margin: 0 auto;            /* Esto también ayuda a centrar */
+  max-width: 1000px;         /* Para que no se haga gigante */
+  padding: 40px 0;
+}
+
+.texto {
+  max-width: 500px;
+  font-family: "Futura", serif;
+  line-height: 1.5;
+}
+
+.imagen img {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+}
+
+video {
+    display: block;
+    margin: 30px auto;
+    border-radius: 10px;
+}
