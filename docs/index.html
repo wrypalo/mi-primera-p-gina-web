@@ -7,6 +7,78 @@
     <!-- enlaza tu CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
+<head>
+  <meta charset="utf-8">
+  <title>Festival App</title>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #97A8D2;
+    }
+
+    /* BARRA SUPERIOR */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background-color: rgba(151,168,210,0.85);
+      backdrop-filter: blur(4px);
+      z-index: 10;
+    }
+
+    /* BOTONES (con borde más oscuro) */
+    .btn {
+      background-color: #97A8D2;
+      border: 2px solid #7C8EB3;
+      padding: 12px 20px;
+      border-radius: 14px;
+      font-size: 17px;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* BOTÓN DEL LOGO — SIN BORDE */
+    .logo-btn {
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #97A8D2;
+      border-radius: 14px;
+      border: none; /* ⭐ SIN BORDE */
+    }
+
+    /* LOGO */
+    .icono {
+      height: 140px;
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- MENÚ SUPERIOR -->
+  <nav class="top-bar">
+    <button class="logo-btn">
+      <img src="logo.png" class="icono">
+    </button>
+
+    <button class="btn">Inicio</button>
+    <button class="btn">Historial del festival</button>
+    <button class="btn">Análisis tops</button>
+    <button class="btn">Conclusión</button>
+  </nav>
+  
 <body>
 
 <div class="contenedor">
@@ -25,8 +97,27 @@
     <source src="Shakira, Eres, Festival de Viña del Mar 1993 (720p_24fps_H264-128kbit_AAC).mp4" type="video/mp4">
     
 </video>
+
+<div class="parrafo-shakira">
+    <p>
+        Treinta años después, Shakira se ha convertido en una de las artistas latinoamericanas más
+        reconocidas a nivel mundial. Lo que comenzó como una presentación de una joven representando a su país en la Competencia
+        Internacional de Viña del Mar terminó siendo el punto de partida de una carrera que
+        hoy acumula hitos globales. A lo largo de tres décadas, la colombiana ha recibido algunos de los reconocimientos más importantes de la industria musical. Hoy, la cantautora de "Loba", cuenta con más de 520, de los que destacan 15 Latin Grammy y 4 premios Grammy. Sus discos han encabezado rankings mundiales, sus
+        giras llenan estadios y su presencia sigue siendo un referente cultural para distintas
+        generaciones.
+    </p>
+
+    <p>
+        Y aun así, ese primer paso sobre la Quinta Vergara permanece como un recuerdo clave:
+        el momento en que una joven de 16 años, casi desconocida fuera de su país, encontró una
+        vitrina que la proyectaría mucho más allá de Chile.
+    </p>
 </div>
-    <p>Puedes visitar nuestro 
+
+
+
+   <p>Puedes visitar nuestro 
         <a href="//miro.com/app/board/uXjVJuTYokk=/" title="ola">sitio</a>
     </p>
 
