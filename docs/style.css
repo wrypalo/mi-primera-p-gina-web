@@ -178,7 +178,7 @@ video  {
 }
 
 .imagen-lira img {
-  width: 50px;      /* ancho más pequeño */
+  width: 100px;      /* ancho más pequeño */
   height: auto;      /* mantiene la proporción original */
   display: block;    /* necesario para centrar con margin */
   margin: 20px auto; /* centra horizontalmente y deja un poco de espacio arriba y abajo */
