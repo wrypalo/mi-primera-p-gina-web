@@ -197,6 +197,14 @@ video  {
     border-radius: 10px;
 }
 
+.imagen-lira{
+  width: 300px;      /* ancho más pequeño */
+  height: auto;      /* mantiene la proporción original */
+  display: block;    /* necesario para centrar con margin */
+  margin: 20px auto; /* centra horizontalmente y deja un poco de espacio arriba y abajo */
+  border-radius: 8px; /* opcional: bordes redondeados */
+}
+
 .contenedor-texto {
   max-width: 900px;      /* hace más corto el ancho del bloque */
   margin: 0 auto;        /* centra el bloque */
