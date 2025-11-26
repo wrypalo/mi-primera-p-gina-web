@@ -26,9 +26,7 @@ body {
   font-family: "Futura", serif;
   line-height: 1.6;
   text-align: justify;
-  display: flex;               /* ← ESTA LÍNEA */
   flex-direction: column;      /* ← ESTA LÍNEA */
-  justify-content: center;     /* ← ESTA LÍNEA */
 }
 
 .imagen img {
