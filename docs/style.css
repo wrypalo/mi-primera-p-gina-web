@@ -58,7 +58,7 @@ body {
     }
 
     .icono {
-      height: 70px; /* reducir para que no sea gigantesco */
+      height:100px; /* reducir para que no sea gigantesco */
       width: auto;
     }
 
