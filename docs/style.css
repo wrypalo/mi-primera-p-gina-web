@@ -79,14 +79,6 @@ body {
       padding: 0;
     }
 
-
-    .imagen img {
-      width: 500px;
-      height: auto;
-      border-radius: 8px;
-      display: block;
-    }
-
     video {
       display: block;
       margin: 30px auto;
