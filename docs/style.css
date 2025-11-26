@@ -51,7 +51,7 @@ video  {
 
 .imagen-centro {
     text-align: center;
-    margin: 400px 0;  /* o 40px si prefieres menos */
+    margin: 400px ;  /* o 40px si prefieres menos */
 }
 
 .imagen-centro img {
