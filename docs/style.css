@@ -173,8 +173,6 @@ body {
   align-items: center;
   gap: 30px;
   margin: 30px auto;
-  max-width: 1050px;
-  padding: 40px 0;
 }
 
 .texto {
@@ -210,7 +208,7 @@ video  {
 .imagen-centro {
     text-align: center;
     margin: 40px ;  /* o 40px si prefieres menos */
-    margin-top: 200px;
+    margin-top: 400px;
 }
 
 .imagen-centro img {
