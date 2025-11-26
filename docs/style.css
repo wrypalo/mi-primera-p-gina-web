@@ -70,29 +70,6 @@ video  {
     text-align: justify;
 }
 
-
-.boton-centro {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.boton-link {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #eb008b;   /* puedes cambiar el color */
-    color: white;
-    text-decoration: none;
-    font-family: "Futura", sans-serif;
-    font-size: 18px;
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.boton-link:hover {
-    background-color: #b0005a;  /* color al pasar el mouse */
-}
-
-
 .contenido {
     margin-top: 120px;   /* Aumenta o disminuye según necesites */
 }
