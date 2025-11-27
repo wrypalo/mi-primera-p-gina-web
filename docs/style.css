@@ -142,6 +142,7 @@ body {
   gap: 40px;
   margin: 40px auto;
   max-width: 1000px;
+  text-align: center;
 }
 
 .texto {
