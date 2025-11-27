@@ -259,10 +259,12 @@ video  {
     font-family: "Futura", sans-serif;
 }
 
-.pregunta-destacada {
+.parrafo.pregunta {
     display: block;
     width: fit-content;
     margin: 40px auto;
+    margin-top: 300px;
+    margin-bottom: 300px;
 }
   .parrafo.vitrina {
   text-align: center; /* centra el texto dentro del div */
