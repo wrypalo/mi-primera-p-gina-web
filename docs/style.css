@@ -294,3 +294,11 @@ video  {
   font-size: 18px;
   text-align: justify; /* el bloque ya está centrado gracias al margin */
 }
+
+.imagen-viña-antiguo img {
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
