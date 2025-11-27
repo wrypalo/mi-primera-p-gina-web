@@ -136,30 +136,24 @@ body {
 
 .contenedor {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
-  margin: 40px auto;
+  margin: 150px auto;
   max-width: 1000px;
-  text-align: center;
 }
 
 .texto {
   max-width: 480px;
-  font-family: "Futura", serif;
+  font-family: "Futura", sans-serif;
   line-height: 1.6;
   text-align: justify;
-  margin-top: 200px;
-  font-family: "Futura", serif;
 }
 
 .imagen img {
   width: 480px;
   height: auto;
   border-radius: 8px;
-  display: block;
-  margin-top: 200px;
 }
 
 video  {
