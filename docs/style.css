@@ -256,3 +256,14 @@ video  {
   line-height: 1.6;
   font-size: 18px;
 }
+
+.imagen-viña {
+    text-align: center;
+    margin: 40px ;  /* o 40px si prefieres menos */
+}
+
+.imagen-viña img {
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
