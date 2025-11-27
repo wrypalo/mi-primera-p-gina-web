@@ -237,21 +237,26 @@ video  {
 
   }
 
-  .parrafo.pregunta {
-  display: inline-block;
-  margin: 300px auto;
-  padding: 15px 25px;
+ .parrafo.pregunta {
+  max-width: 900px;
+  margin: 300px auto;   /* centra horizontalmente */
+  padding: 20px 40px;
+  text-align: center;   /* centra texto */
+  font-family: "Futura", sans-serif;
+  line-height: 1.6;
+  font-size: 22px;
+  font-weight: bold;
+
+  /* estilos visuales */
   border: 3px solid #eb008b;
   border-radius: 12px;
-  font-weight: bold;
-  font-size: 22px;
   background-color: #eb008b;
-  text-align: center;
   color: white;
-  font-family: "Futura", sans-serif;
-  width: fit-content;
-  display: block;
+
+  width: fit-content;   /* hace que se ajuste al tamaño del texto */
+  display: block;       /* necesario para que margin auto funcione */
 }
+
 
 
   .parrafo.vitrina {
