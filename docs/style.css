@@ -273,3 +273,16 @@ video  {
     display: block;
     margin: 0 auto;
 }
+
+.separador-antorcha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;            /* espacio entre antorchas */
+  margin: 80px 0;       /* separa el bloque del texto */
+}
+
+.separador-antorcha img {
+  width: 80px;          /* tamaño de separador (puedes ajustar) */
+  height: auto;
+}
