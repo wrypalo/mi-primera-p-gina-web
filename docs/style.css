@@ -264,10 +264,15 @@ video  {
   font-size: 18px;
 }
 
+.imagen-viña img {
+    width: 700px;
+    height: auto;
+    border-radius: 10px;
+}
 
 .grafico.cabezas img {
     width: 100%;       /* toma el ancho del contenedor */
-    max-width: 200px;  /* no se hará más grande que 700px */
+    max-width: 400px;  /* no se hará más grande que 700px */
     height: auto;      /* mantiene proporciones */
     border-radius: 10px;
     display: block;
