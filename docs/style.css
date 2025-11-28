@@ -305,11 +305,11 @@ video  {
 }
 
 .parrafo.historia.vina {
-  max-width: 900px;
-  margin: 100px auto;   /* ajusta según lo que quieras de separación vertical */
-  padding: 20px 40px; 
+  max-width: 900px;       /* limita el ancho del bloque */
+  margin: 100px auto;     /* centra horizontalmente y separa verticalmente */
+  padding: 20px 40px;
   font-family: "Futura", sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  text-align: justify; /* si quieres igual que otros párrafos justificados */
+  text-align: justify;    /* justifica el texto dentro del div */
 }
