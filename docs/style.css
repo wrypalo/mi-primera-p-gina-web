@@ -272,7 +272,7 @@ video  {
 
 .grafico.cabezas img {
     width: 100%;       /* toma el ancho del contenedor */
-    max-width: 400px;  /* no se hará más grande que 700px */
+    max-width: 500px;  /* no se hará más grande que 700px */
     height: auto;      /* mantiene proporciones */
     border-radius: 10px;
     display: block;
