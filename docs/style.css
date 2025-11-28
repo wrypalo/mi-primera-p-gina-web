@@ -295,16 +295,17 @@ video  {
   text-align: justify; /* el bloque ya está centrado gracias al margin */
 }
 
+/* Imagen antigua del festival centrada */
 .imagen-viña-antiguo img {
-    width: 700px;
-    max-width: 100%;      /* para que sea responsive */
-    height: auto;
+    width: 700px;       /* tamaño de la imagen */
+    max-width: 100%;    /* para que se adapte en móviles */
+    height: auto;       /* mantiene proporción */
     border-radius: 10px;
-    display: block;
-    margin: 100px auto 50px auto;  /* top, horizontal auto, bottom */
+    display: block;     /* necesario para centrar con margin */
+    margin: 100px auto 50px auto; /* top, horizontal, bottom */
 }
 
-.parrafo.historia.vina {
+    .parrafo.historia.vina {
   max-width: 900px;       /* limita el ancho del bloque */
   margin: 100px auto;     /* centra horizontalmente y separa verticalmente */
   padding: 20px 40px;
@@ -314,8 +315,7 @@ video  {
   text-align: justify;    /* justifica el texto dentro del div */
 }
 
-/* CSS para centrar el gráfico Vega-Lite */
-#vis {
-    width: fit-content;  /* Ajusta el ancho al tamaño del gráfico */
-    margin: 30px auto;   /* Centrado horizontal con margen superior e inferior */
+#vis1 {
+    width: fit-content;   /* ajusta al tamaño del gráfico */
+    margin: 50px auto;    /* centrado horizontalmente */
 }
