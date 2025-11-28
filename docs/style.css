@@ -325,9 +325,19 @@ video  {
 }
 
 .flourish-embed {
-  width: 600px;      /* ancho fijo, puedes cambiar a % si quieres responsivo */
-  height: 400px;     /* alto fijo */
-  margin: 0 auto;    /* centra el gráfico horizontalmente */
+  width: 600px;
+  height: 400px;    /* altura efectiva */
+  margin: 0 auto;
+  position: relative;  /* importante */
+  overflow: hidden;    /* evita desbordes */
+}
+
+.flourish-embed iframe {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 
