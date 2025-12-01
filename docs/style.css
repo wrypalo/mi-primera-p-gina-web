@@ -324,22 +324,6 @@ video  {
   text-align: justify;    /* justifica el texto dentro del div */
 }
 
-.flourish-embed {
-  width: 600px;
-  height: 400px;    /* altura efectiva */
-  margin: 0 auto;
-  position: relative;  /* importante */
-  overflow: hidden;    /* evita desbordes */
-}
-
-.flourish-embed iframe {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 
   .parrafo.analisis {
   max-width: 900px;       /* limita el ancho del bloque */
@@ -349,4 +333,8 @@ video  {
   line-height: 1.6;
   font-size: 18px;
   text-align: justify;    /* justifica el texto dentro del div */
+}
+
+body {
+    background: #97A8D2 !important;
 }
