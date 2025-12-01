@@ -178,8 +178,185 @@ Con esto comenzaron a mejorar las condiciones en las que se realizaba el festiva
 
 </div>
 
-<div class="flourish-embed" data-src="story/3473309"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/story/3473309/thumbnail" width="100%" alt="visualization" /></noscript></div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Estrellas</title>
 
+<style>
+
+    body {
+        font-family: Futura, sans-serif;
+        background: #fafafa;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    #initialBlock {
+        margin-bottom: 10px;
+    }
+
+    #bigStar {
+        font-size: 90px;
+        color: #7E4782;
+        animation: fadeIn 1s ease-out forwards;
+    }
+
+    #initialText {
+        margin-top: 5px;
+        font-size: 20px;
+        opacity: 0;
+        animation: fadeIn 1.2s ease-out forwards 0.3s;
+    }
+
+    #starsContainer {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .star {
+        font-size: 18px;
+        opacity: 0;
+        animation: appear 0.4s forwards ease-out;
+        margin: 4px;
+    }
+
+    #finalText {
+        margin-top: 40px;
+        opacity: 0;
+    }
+
+    .final-title {
+        font-size: 36px;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .legend {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    /* ANIMACIONES */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+
+    @keyframes appear {
+        from { opacity: 0; transform: scale(0.6); }
+        to { opacity: 1; transform: scale(1); }
+    }
+
+</style>
+</head>
+
+<body>
+
+    <!-- ⭐ ESTRELLA GRANDE + FRASE ARRIBA -->
+    <div id="initialBlock">
+        <div id="bigStar">★</div>
+        <div id="initialText">Cada estrella representa a un artista</div>
+    </div>
+
+    <!-- ⭐ CONTENEDOR DE LAS 259 ESTRELLAS -->
+    <div id="starsContainer"></div>
+
+    <!-- ⭐ FRASE FINAL ABAJO (COMO PEDISTE) -->
+    <div id="finalText"></div>
+
+
+
+<script>
+
+const total = 259;
+const hombres = 196;
+const mujeres = 42;
+const mixtos = 21;
+
+let count = 0;
+
+const colors = {
+    hombre: "#EB008B",
+    mujer: "#7E4782",
+    mixto: "#8FA3CC"
+};
+
+const starsContainer = document.getElementById("starsContainer");
+const finalText = document.getElementById("finalText");
+
+/* ⭐ Desaparece la estrella y frase inicial */
+function hideInitialBlock() {
+    const big = document.getElementById("bigStar");
+    const text = document.getElementById("initialText");
+
+    big.style.animation = "fadeOut 0.6s forwards";
+    text.style.animation = "fadeOut 0.6s forwards";
+
+    setTimeout(() => {
+        document.getElementById("initialBlock").style.display = "none";
+    }, 600);
+}
+
+function addStar() {
+    for (let i = 0; i < total; i++) {
+        setTimeout(() => {
+            const star = document.createElement("div");
+            star.classList.add("star");
+            star.textContent = "★";
+
+            if (i < hombres) star.style.color = colors.hombre;
+            else if (i < hombres + mujeres) star.style.color = colors.mujer;
+            else star.style.color = colors.mixto;
+
+            starsContainer.appendChild(star);
+        }, (i / total) * 3000); // 3000 ms = 3 segundos
+    }
+}
+
+
+/* ⭐ Frase final */
+function showFinalText() {
+    finalText.innerHTML = `
+        <div class="final-title">259 artistas</div>
+        <div class="legend">
+            Desde 1960, en el Festival se han presentado:<br><br>
+            <span style="color:#EB008B;">● ${hombres} hombres</span><br>
+            <span style="color:#7E4782;">● ${mujeres} mujeres</span><br>
+            <span style="color:#8FA3CC;">● ${mixtos} proyectos mixtos</span>
+        </div>
+    `;
+    finalText.style.animation = "fadeIn 1.8s forwards";
+}
+
+/* ⭐ Secuencia final */
+setTimeout(() => {
+    hideInitialBlock();     // desaparece la estrella grande
+    addStar();              // aparecen las 259 estrellas
+
+    const totalTime = (3 + 0.3) * 1000;
+
+    setTimeout(() => {
+        showFinalText();    // aparece frase final ABAJO ❤️
+    }, totalTime);
+
+}, 2000);
+
+</script>
+
+</body>
+</html>
 
 <div class="parrafo analisis">
 
