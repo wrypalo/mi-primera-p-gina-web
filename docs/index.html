@@ -205,12 +205,12 @@ Con esto comenzaron a mejorar las condiciones en las que se realizaba el festiva
 <title>Estrellas</title>
 
 <style>
-
     body {
         font-family: Futura, sans-serif;
         background: #fafafa;
         text-align: center;
         padding-top: 40px;
+        height: 200vh; /* <-- para permitir scroll */
     }
 
     #initialBlock {
@@ -266,46 +266,42 @@ Con esto comenzaron a mejorar las condiciones en las que se realizaba el festiva
     /* ANIMACIONES */
     @keyframes fadeIn {
         from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        to   { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeOut {
         from { opacity: 1; }
-        to { opacity: 0; }
+        to   { opacity: 0; }
     }
 
     @keyframes appear {
         from { opacity: 0; transform: scale(0.6); }
-        to { opacity: 1; transform: scale(1); }
+        to   { opacity: 1; transform: scale(1); }
     }
-
 </style>
-</head>
 
+</head>
 <body>
 
-    <!-- ⭐ ESTRELLA GRANDE + FRASE ARRIBA -->
-    <div id="initialBlock">
-        <div id="bigStar">★</div>
-        <div id="initialText">Cada estrella representa a un artista</div>
-    </div>
+<!-- ESTRELLA GRANDE + FRASE -->
+<div id="initialBlock">
+    <div id="bigStar">★</div>
+    <div id="initialText">Cada estrella representa a un artista</div>
+</div>
 
-    <!-- ⭐ CONTENEDOR DE LAS 259 ESTRELLAS -->
-    <div id="starsContainer"></div>
+<!-- CONTENEDOR DE LAS 259 ESTRELLAS -->
+<div id="starsContainer"></div>
 
-    <!-- ⭐ FRASE FINAL ABAJO (COMO PEDISTE) -->
-    <div id="finalText"></div>
-
+<!-- TEXTO FINAL -->
+<div id="finalText"></div>
 
 
 <script>
-
+/* DATOS */
 const total = 259;
 const hombres = 196;
 const mujeres = 42;
 const mixtos = 21;
-
-let count = 0;
 
 const colors = {
     hombre: "#EB008B",
@@ -316,11 +312,10 @@ const colors = {
 const starsContainer = document.getElementById("starsContainer");
 const finalText = document.getElementById("finalText");
 
-/* ⭐ Desaparece la estrella y frase inicial */
+/* OCULTAR ESTRELLA INICIAL */
 function hideInitialBlock() {
     const big = document.getElementById("bigStar");
     const text = document.getElementById("initialText");
-
     big.style.animation = "fadeOut 0.6s forwards";
     text.style.animation = "fadeOut 0.6s forwards";
 
@@ -329,6 +324,7 @@ function hideInitialBlock() {
     }, 600);
 }
 
+/* AGREGAR LAS 259 ESTRELLAS */
 function addStar() {
     for (let i = 0; i < total; i++) {
         setTimeout(() => {
@@ -341,12 +337,12 @@ function addStar() {
             else star.style.color = colors.mixto;
 
             starsContainer.appendChild(star);
-        }, (i / total) * 3000); // 3000 ms = 3 segundos
+
+        }, (i / total) * 3000); // 3 segundos total
     }
 }
 
-
-/* ⭐ Frase final */
+/* TEXTO FINAL */
 function showFinalText() {
     finalText.innerHTML = `
         <div class="final-title">259 artistas</div>
@@ -360,19 +356,27 @@ function showFinalText() {
     finalText.style.animation = "fadeIn 1.8s forwards";
 }
 
-/* ⭐ Secuencia final */
-setTimeout(() => {
-    hideInitialBlock();     // desaparece la estrella grande
-    addStar();              // aparecen las 259 estrellas
+/* SECUENCIA COMPLETA */
+function startSequence() {
+    hideInitialBlock();
+    addStar();
 
     const totalTime = (3 + 0.3) * 1000;
 
     setTimeout(() => {
-        showFinalText();    // aparece frase final ABAJO ❤️
+        showFinalText();
     }, totalTime);
+}
 
-}, 2000);
+/* ACTIVAR CON SCROLL UNA SOLA VEZ */
+let triggered = false;
 
+window.addEventListener("scroll", () => {
+    if (!triggered) {
+        triggered = true;
+        startSequence();
+    }
+});
 </script>
 
 </body>
