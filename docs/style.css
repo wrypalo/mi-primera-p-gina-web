@@ -184,7 +184,8 @@ video  {
     height: auto;
     border-radius: 10px;
     display: block;      /* convierte la imagen en bloque */
-    margin: 0 auto;  
+    margin: 0 auto; 
+    margin-top: 200px; 
 }
 
 .grafico.cabezas img {
