@@ -410,3 +410,9 @@ body {
   line-height: 1.6;
   font-size: 18px;
 }
+
+.foto-inicial {
+
+    width: 400px; /* cambia este número para hacerlo más chico o más grande */
+
+}
