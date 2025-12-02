@@ -345,10 +345,14 @@ body {
   margin: 0 auto;   /* centrado */
 }
 
-.grafico-chico .flourish-embed {
+.grafico-chico {
   width: 100%;      /* importante: ocupa solo lo que permite el contenedor */
   height: 400px;    /* puedes reducir esta altura */
 }
+.grafico-chico {
+  margin-bottom: 40px;  /* separa el gráfico de lo que viene abajo */
+}
+
 
 .parrafo.analisis.cabezas{
   text-align: center; /* centra el texto dentro del div */
