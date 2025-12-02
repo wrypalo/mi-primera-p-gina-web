@@ -411,11 +411,15 @@ body {
   font-size: 18px;
 }
 
-.foto-inicial img{
+.foto-inicial {
+    width: 600px; 
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
 
-  width: 600px; /* cambia este número para hacerlo más chico o más grande */
-  text-align: center; /* centra el texto dentro del div */
-  margin: 0 auto;     /* centra el div en la página si tiene ancho menor al contenedor */
-  margin-top: 70px;
-  margin-bottom: 50px;  
+.foto-inicial img {
+    width: 100%;
+    height: auto;
 }
