@@ -134,99 +134,33 @@ body {
   border-radius: 8px;
 }
 
+.foto-inicial img {
+    width: 900px !important;
+    max-width: 900px !important;
+    height: auto !important;
+    display: block;
+    margin: 70px auto 50px auto;
+}
+
+.parrafo.inicio {
+  max-width: 900px;
+  margin: 0 auto;      /* centra el bloque */
+  margin-top: 70px;
+  margin-bottom: 100px;
+  padding: 20px 40px;
+
+  font-family: "Futura", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+
+  text-align: justify; /* justifica el texto */
+}
 video  {
     display: block;
     margin: 50px auto;
     margin-top: 200px;
     margin-bottom: 200px;
     border-radius: 10px;
-}
-
-.imagen-lira img {
-  width: 200px;      /* ancho más pequeño */
-  height: auto;      /* mantiene la proporción original */
-  display: block;    /* necesario para centrar con margin */
-  margin: 20px auto; /* centra horizontalmente y deja un poco de espacio arriba y abajo */
-  margin-top: 400px;
-  margin-bottom: 400px;
-  border-radius: 8px; /* opcional: bordes redondeados */
-}
-
-.contenedor-texto {
-  max-width: 900px;      /* hace más corto el ancho del bloque */
-  margin: 0 auto;        /* centra el bloque */
-  padding: 20px 40px;    /* espacio interior */
-  line-height: 1.6;
-  font-size: 18px;
-  text-align: justify;      /* por si quieres alinear a la izquierda */
-  font-family: "Futura", serif;
-}
-
-.imagen-nosotras {
-    text-align: center;
-    margin: 40px ;  /* o 40px si prefieres menos */
-}
-
-.imagen-nosotras img {
-    width: 700px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.parrafo-shakira {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px 40px;
-    font-family: "Futura", sans-serif;
-    font-size: 18px;
-    line-height: 1.6;
-    text-align: justify;
-}
-
-.parrafo.luismi {
-  text-align: center; /* centra el texto dentro del div */
-  max-width: 900px;   /* opcional: limita ancho para que se vea mejor */
-  margin: 0 auto;     /* centra el div en la página si tiene ancho menor al contenedor */
-  margin-top: 200px;
-  text-align: justify;
-  padding: 20px 40px; 
-  font-family: "Futura", sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
-}
-
-.parrafo.pregunta {
-  text-align: center; /* centra el texto dentro del div */
-  max-width: 900px;   /* opcional: limita ancho para que se vea mejor */
-  margin: 0 auto;     /* centra el div en la página si tiene ancho menor al contenedor */
-  margin-top: 300px;
-  margin-bottom: 300px;
-  padding: 20px 40px; 
-  font-family: "Futura", sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
-  font-weight: bold;
-
-  }
-
- .parrafo.pregunta {
-  max-width: 900px;
-  margin: 300px auto;   /* centra horizontalmente */
-  padding: 20px 40px;
-  text-align: center;   /* centra texto */
-  font-family: "Futura", sans-serif;
-  line-height: 1.6;
-  font-size: 22px;
-  font-weight: bold;
-
-  /* estilos visuales */
-  border: 3px solid #eb008b;
-  border-radius: 12px;
-  background-color: #eb008b;
-  color: white;
-
-  width: fit-content;   /* hace que se ajuste al tamaño del texto */
-  display: block;       /* necesario para que margin auto funcione */
 }
 
   .parrafo.vitrina {
@@ -389,25 +323,4 @@ body {
   font-size: 18px;
 }
 
-.foto-inicial img {
-    width: 900px !important;
-    max-width: 900px !important;
-    height: auto !important;
-    display: block;
-    margin: 70px auto 50px auto;
-}
-
-.parrafo.inicio {
-  max-width: 900px;
-  margin: 0 auto;      /* centra el bloque */
-  margin-top: 70px;
-  margin-bottom: 100px;
-  padding: 20px 40px;
-
-  font-family: "Futura", sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-
-  text-align: justify; /* justifica el texto */
-}
 
