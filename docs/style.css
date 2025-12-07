@@ -338,7 +338,7 @@
 }
 
 .carrusel-wrapper {
-  transform: scale(0.75);   /* achica el tamaño total */
+  transform: scale(0.80);   /* achica el tamaño total */
   transform-origin: top center;
   width: 100%;
   display: flex;
