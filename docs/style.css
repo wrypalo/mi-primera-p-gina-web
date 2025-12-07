@@ -320,4 +320,14 @@ body {
   font-size: 18px;
 }
 
+.imagen-separador-lira img {
+    width: 100px;       /* tamaño de la imagen */
+    max-width: 100%;    /* para que se adapte en móviles */
+    height: auto;       /* mantiene proporción */
+    border-radius: 10px;
+    display: block;     /* necesario para centrar con margin */
+    margin: 50px auto 50px auto; /* top, horizontal, bottom */
+}
+
+
 
