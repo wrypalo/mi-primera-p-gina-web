@@ -205,16 +205,15 @@
 }
 
 .inicios-viña {
+  display: block;
+  box-sizing: border-box;   /* evita que el padding "desplace" el ancho */
+  width: 100%;
   max-width: 900px;
+  margin: 100px auto 200px auto; /* centra horizontalmente */
   padding: 20px 40px;
-  font-family: "Futura", sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
-  text-align: justify; /* el bloque ya está centrado gracias al margin */
   color: black;
-  margin: 100px auto 200px auto;
- 
 }
+
 
 .imagen-viña-antiguo img {
     width: 700px;       /* tamaño de la imagen */
