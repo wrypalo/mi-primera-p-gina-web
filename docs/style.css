@@ -320,7 +320,7 @@ body {
   font-size: 18px;
 }
 
-.separador-lira img {
+.separador.lira img {
     width: 100px;       /* tamaño de la imagen */
     display: block;     /* necesario para centrar con margin */
     margin: 50px auto  
