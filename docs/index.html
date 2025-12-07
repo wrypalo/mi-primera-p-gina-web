@@ -147,25 +147,139 @@
 <section class="seccion-3">
 
   <!-- ⭐ GRÁFICO DE ESTRELLAS -->
-  <div class="grafico-estrellas">
+<div class="grafico-estrellas">
 
-    <style>
-      /* Tus estilos internos se mantienen igual */
-    </style>
+<style>
+    #initialBlock { margin-bottom: 10px; text-align: center; }
+    #bigStar { font-size: 90px; color: #7E4782; animation: fadeIn 1s ease-out forwards; }
+    #initialText { margin-top: 5px; font-size: 20px; opacity: 0; animation: fadeIn 1.2s ease-out forwards 0.3s; }
 
-    <div id="initialBlock">
-      <div id="bigStar">★</div>
-      <div id="initialText">Cada estrella representa a un artista</div>
-    </div>
+    #starsContainer {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-    <div id="starsContainer"></div>
-    <div id="finalText"></div>
+    .star {
+      font-size: 18px;
+      opacity: 0;
+      animation: appear 0.4s forwards ease-out;
+      margin: 4px;
+    }
 
-    <script>
-      /* Todo tu script se mantiene intacto */
-    </script>
+    #finalText {
+      margin-top: 40px;
+      opacity: 0;
+      text-align: center;
+    }
 
-  </div>
+    .final-title { font-size: 36px; font-weight: 400; margin-bottom: 10px; }
+    .legend { font-size: 18px; line-height: 1.6; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    @keyframes appear {
+      from { opacity: 0; transform: scale(0.6); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+</style>
+
+<div id="initialBlock">
+  <div id="bigStar">★</div>
+  <div id="initialText">Cada estrella representa a un artista</div>
+</div>
+
+<div id="starsContainer"></div>
+<div id="finalText"></div>
+
+<script>
+  const total = 259;
+  const hombres = 196;
+  const mujeres = 42;
+  const mixtos = 21;
+
+  const colors = {
+    hombre: "#EB008B",
+    mujer: "#7E4782",
+    mixto: "#8FA3CC"
+  };
+
+  const starsContainer = document.getElementById("starsContainer");
+  const finalText = document.getElementById("finalText");
+
+  function hideInitialBlock() {
+    const big = document.getElementById("bigStar");
+    const text = document.getElementById("initialText");
+
+    big.style.animation = "fadeOut 0.6s forwards";
+    text.style.animation = "fadeOut 0.6s forwards";
+
+    setTimeout(() => {
+      document.getElementById("initialBlock").style.display = "none";
+    }, 600);
+  }
+
+  function addStar() {
+    for (let i = 0; i < total; i++) {
+      setTimeout(() => {
+        const star = document.createElement("div");
+        star.classList.add("star");
+        star.textContent = "★";
+
+        if (i < hombres) star.style.color = colors.hombre;
+        else if (i < hombres + mujeres) star.style.color = colors.mujer;
+        else star.style.color = colors.mixto;
+
+        starsContainer.appendChild(star);
+      }, (i / total) * 3000);
+    }
+  }
+
+  function showFinalText() {
+    finalText.innerHTML = `
+      <div class="final-title">259 artistas</div>
+      <div class="legend">
+        Desde 1960, en el Festival se han presentado:<br><br>
+        <span style="color:#EB008B;">● ${hombres} hombres</span><br>
+        <span style="color:#7E4782;">● ${mujeres} mujeres</span><br>
+        <span style="color:#8FA3CC;">● ${mixtos} proyectos mixtos</span>
+      </div>
+    `;
+    finalText.style.animation = "fadeIn 1.8s forwards";
+  }
+
+  function startSequence() {
+    hideInitialBlock();
+    addStar();
+
+    const totalTime = (3 + 0.3) * 1000;
+
+    setTimeout(() => {
+      showFinalText();
+    }, totalTime);
+  }
+
+  let triggered = false;
+
+  window.addEventListener("scroll", () => {
+    if (!triggered) {
+      triggered = true;
+      startSequence();
+    }
+  });
+</script>
+
+</div>
 
   <div class="parrafo analisis">
     <p>Según los datos recopilados, aproximadamente el 73% de los artistas que se han presentado en Viña son hombres, mientras que solo el 19% corresponde a mujeres y solo un 8% a agrupaciones mixtas. Estos números dejan la situación clara: existe una brecha de género en el festival que no es menor, y aunque en los últimos años se han hecho esfuerzos por diversificar su parrilla, la desigualdad sigue siendo evidente. </p>
