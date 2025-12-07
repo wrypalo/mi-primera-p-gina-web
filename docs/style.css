@@ -305,6 +305,12 @@
   margin-bottom: 120px !important;
 }
 
+.carrusel.fotos {
+  max-width: 500px;   /* ajusta el tamaño que quieras */
+  margin: 0 auto;     /* centra el carrusel */
+  padding: 20px 0;    /* opcional */
+}
+
 .grafico-artistas-totales {
 
   text-align: center; /* centra el texto dentro del div */
