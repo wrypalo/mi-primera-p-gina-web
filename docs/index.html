@@ -32,7 +32,7 @@
   <!-- CONTENEDOR PRINCIPAL -->
   <main class="contenido">
 
-    <section class="seccion seccion-1">
+    <section class="seccion seccion-1" data-color="#97A8D2">
 
       <div class="foto-inicial">
         <img src="inicio.png" alt="foto inicio">
@@ -129,7 +129,7 @@
     </section>
   </main>
 
-  <section class="seccion seccion-2">
+  <section class="seccion seccion-2" data-color="#11102c">
 
     <div class="imagen-viña-antiguo">
       <img src="viña antiguo.png" alt="viña antiguo">
@@ -147,7 +147,7 @@
     </div>
   </section>
 
-  <section class="seccion seccion-3">
+  <section class="seccion seccion-3" data-color="#2e3566">
 
     <!-- GRÁFICO ESTRELLAS -->
      
@@ -162,23 +162,18 @@
   </section>
 
   <!-- JAVASCRIPT PARA TRANSICIÓN DE COLORES -->
-  <script>
-    const secciones = document.querySelectorAll(".seccion");
+ <script>
+document.addEventListener("scroll", () => {
+  const secciones = document.querySelectorAll("section");
+  secciones.forEach((seccion) => {
+    const rect = seccion.getBoundingClientRect();
+    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+      document.body.style.backgroundColor = window.getComputedStyle(seccion).backgroundColor;
+    }
+  });
+});
+</script>
 
-    window.addEventListener("scroll", () => {
-      const scrollPos = window.scrollY + window.innerHeight / 2;
-
-      secciones.forEach(sec => {
-        const top = sec.offsetTop;
-        const bottom = top + sec.offsetHeight;
-
-        if (scrollPos >= top && scrollPos < bottom) {
-          document.body.style.transition = "background-color 1s ease";
-          document.body.style.backgroundColor = getComputedStyle(sec).backgroundColor;
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>
