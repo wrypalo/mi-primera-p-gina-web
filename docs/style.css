@@ -16,14 +16,10 @@
       padding-top: 84px; /* ajusta según la altura real de tu top-bar */
 }
 
-body {
-    transition: background-color 0.8s ease; 
+section {
+  transition: background-color 0.8s ease, color 0.8s ease;
 }
 
-.seccion-1 { background: #97A8D2;}
-.seccion-2 { background: #11102c;}
-.seccion-3 { background: #2e3566;}
-  
 
     /* BARRA SUPERIOR */
     .top-bar {
@@ -218,6 +214,17 @@ body {
   margin-top: 300px;
   margin-bottom: 300px;
   text-transform: uppercase;
+}
+
+.intro.nacionalidades {
+  max-width: 900px;       /* limita el ancho del bloque */
+  margin: 100px auto;     /* centra horizontalmente y separa verticalmente */
+  padding: 20px 40px;
+  font-family: "Futura", sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  text-align: justify;    /* justifica el texto dentro del div */
+  color: black;
 }
 
 .inicios-viña {
