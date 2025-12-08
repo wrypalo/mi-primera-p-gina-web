@@ -225,7 +225,7 @@
   font-weight: 700;
   color: #eb008b;
   text-align: center;
-  margin: 30px 0;
+  margin: 300px 0;
   text-transform: uppercase;
 }
 
@@ -366,7 +366,7 @@
 .separador.lira img {
     width: 100px;       /* tamaño de la imagen */
     display: block;     /* necesario para centrar con margin */
-    margin: 50px auto  
+    margin: 100px auto  
 }
 
 .seccion {
