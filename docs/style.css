@@ -391,6 +391,7 @@
   max-width: 1000px !important;
 }
 
+
 .grafico-evolucion-brecha img {
     width: 500px;       /* tamaño de la imagen */
     display: block;     /* necesario para centrar con margin */
@@ -412,4 +413,73 @@
   font-size: 18px;
   text-align: justify;    /* justifica el texto dentro del div */
   color: black;
+}
+
+/* ⭐ ESTILOS DEL BLOQUE DE ESTRELLAS */
+#initialBlock {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#bigStar {
+    font-size: 90px;
+    color: #7E4782;
+    animation: fadeIn 1s ease-out forwards;
+}
+
+#initialText {
+    margin-top: 5px;
+    font-size: 20px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards 0.3s;
+}
+
+#starsContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.star {
+    font-size: 18px;
+    opacity: 0;
+    animation: appear 0.4s forwards ease-out;
+    margin: 4px;
+}
+
+#finalText {
+    margin-top: 40px;
+    opacity: 0;
+    text-align: center;
+}
+
+.final-title {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.legend {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1); }
 }
