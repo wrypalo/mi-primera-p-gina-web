@@ -391,7 +391,7 @@
   max-width: 1000px !important;
 }
 
-.grafico-evolución-brecha img {
+.grafico-evolucion-brecha img {
     width: 300px;       /* tamaño de la imagen */
     display: block;     /* necesario para centrar con margin */
     margin: 100px auto;
