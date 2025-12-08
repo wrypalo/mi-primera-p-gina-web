@@ -391,13 +391,13 @@
   max-width: 1000px !important;
 }
 
-.grafico.evolución.brecha img {
+.grafico-evolución-brecha img {
     width: 300px;       /* tamaño de la imagen */
     display: block;     /* necesario para centrar con margin */
     margin: 100px auto;
 }
 
-.grafico.premios img {
+.grafico-premios img {
     width: 300px;       /* tamaño de la imagen */
     display: block;     /* necesario para centrar con margin */
     margin: 100px auto; 
