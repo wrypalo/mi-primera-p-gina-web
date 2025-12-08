@@ -394,9 +394,10 @@
 }
 
 .flourish-wrapper {
-  transform: scale(0.8);   /* achica el gráfico (0.8 = 80%) */
+  transform: scale(0.7);   /* achica el gráfico (0.8 = 80%) */
   transform-origin: top center; /* para que no se desplace raro */
   width: 100%;
+  margin: 0 auto;  /* centra horizontalmente */
 }
 
 .flourish-embed {
