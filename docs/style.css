@@ -362,6 +362,16 @@
   color: antiquewhite;
 }
 
+.parrafo.top {
+  max-width: 900px;       /* limita el ancho del bloque */
+  margin: 100px auto;     /* centra horizontalmente y separa verticalmente */
+  padding: 20px 40px;
+  font-family: "Futura", sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  text-align: justify;    /* justifica el texto dentro del div */
+  color: antiquewhite;
+}
 
 .carrusel-wrapper {
   transform: scale(0.80);   /* achica el tamaño total */
