@@ -204,22 +204,6 @@
   height: auto;
 }
 
-.parrafo.intro.pregunta {
-  text-align: center; /* centra el texto dentro del div */
-  max-width: 900px;   /* opcional: limita ancho para que se vea mejor */
-  margin: 0 auto;     /* centra el div en la página si tiene ancho menor al contenedor */
-  margin-top: 70px;
-  margin-bottom: 100px;
-  text-align: justify;
-  padding: 20px 40px; 
-  font-family: "Futura", sans-serif;
-  line-height: 1.6;
-  font-size: 18px;
-  color: black;
-  
-  }
-
-
 .pregunta.destacada {
   font-size: 1.6rem;
   font-weight: 700;
@@ -230,8 +214,6 @@
   margin-bottom: 300px;
   text-transform: uppercase;
 }
-
-
 
 .inicios-viña {
     text-align: center; /* centra el texto dentro del div */
