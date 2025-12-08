@@ -415,7 +415,26 @@
   color: black;
 }
 
-/* ⭐ ESTILOS DEL BLOQUE DE ESTRELLAS */
+/* ⭐ CONTENEDOR DE LAS ESTRELLAS */
+#starsContainer {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centra horizontalmente */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ⭐ ESTILOS DE CADA ESTRELLA */
+.star {
+    font-size: 18px;
+    opacity: 0;
+    animation: appear .4s forwards ease-out;
+    margin: 4px;
+}
+
+/* ⭐ BLOQUE SUPERIOR */
 #initialBlock {
     margin-bottom: 10px;
     text-align: center;
@@ -434,52 +453,22 @@
     animation: fadeIn 1.2s ease-out forwards 0.3s;
 }
 
-#starsContainer {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.star {
-    font-size: 18px;
-    opacity: 0;
-    animation: appear 0.4s forwards ease-out;
-    margin: 4px;
-}
-
 #finalText {
     margin-top: 40px;
     opacity: 0;
     text-align: center;
 }
 
-.final-title {
-    font-size: 36px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-.legend {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-/* Animaciones */
+/* ⭐ Animaciones */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity:0; transform:translateY(10px); }
+    to { opacity:1; transform:translateY(0); }
 }
-
 @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from { opacity:1; }
+    to { opacity:0; }
 }
-
 @keyframes appear {
-    from { opacity: 0; transform: scale(0.6); }
-    to { opacity: 1; transform: scale(1); }
+    from { opacity:0; transform:scale(0.6); }
+    to { opacity:1; transform:scale(1); }
 }
