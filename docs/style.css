@@ -403,7 +403,7 @@
     margin: 100px auto; 
 }
 
-.parrafo.brecha.1 {
+.parrafo.brecha {
   max-width: 900px;       /* limita el ancho del bloque */
   margin: 100px auto;     /* centra horizontalmente y separa verticalmente */
   padding: 20px 40px;
@@ -412,5 +412,4 @@
   font-size: 18px;
   text-align: justify;    /* justifica el texto dentro del div */
   color: black;
-
 }
