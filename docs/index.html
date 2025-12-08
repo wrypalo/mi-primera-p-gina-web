@@ -301,5 +301,19 @@
 </div>
 </section>
 
+<script>
+window.addEventListener("scroll", () => {
+    const scrollPos = window.scrollY;
+
+    if (scrollPos < 600) {
+        document.body.style.backgroundColor = "#97A8D2";
+    } else if (scrollPos < 1200) {
+        document.body.style.backgroundColor = "#11102c";
+    } else {
+        document.body.style.backgroundColor = "#2e3566";
+    }
+});
+</script>
+
 </body>
 </html>
