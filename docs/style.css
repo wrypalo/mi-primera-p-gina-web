@@ -592,3 +592,14 @@
   max-width: 800px;        /* <-- controla el ancho para que el centrado funcione */
   display: block;          /* <-- asegura que se comporte como bloque centrable */
 }
+
+.parrafo.final {
+  max-width: 900px;       /* limita el ancho del bloque */
+  margin: 50px auto;     /* centra horizontalmente y separa verticalmente */
+  padding: 20px 40px;
+  font-family: "Futura", sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  text-align: justify;    /* justifica el texto dentro del div */
+  color: antiquewhite;
+}
