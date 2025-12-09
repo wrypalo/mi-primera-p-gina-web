@@ -603,3 +603,10 @@
   text-align: justify;    /* justifica el texto dentro del div */
   color: antiquewhite;
 }
+
+.foto.final {
+  
+    width: 700px;       /* tamaño de la imagen */
+    display: block;     /* necesario para centrar con margin */
+    margin: 100px auto;
+}
