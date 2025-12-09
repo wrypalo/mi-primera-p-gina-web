@@ -15,6 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
+
 <body>
 
   <!-- MENÚ SUPERIOR -->
@@ -377,9 +378,19 @@ document.getElementById("bigStar").addEventListener("click", () => {
 });
   </script>
 
-  <!-- JAVASCRIPT PARA TRANSICIÓN DE COLORES -->
 
+<script>
+document.addEventListener("scroll", () => {
+    const icon = document.querySelector(".icono");
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const progress = window.scrollY / maxScroll;  // valor entre 0 y 1
 
+    const maxMove = 200; // 👉 Máximo movimiento hacia la derecha (px)
+    const x = progress * maxMove;
+
+    icon.style.transform = `translateX(${x}px)`;
+});
+</script>
 
 </body>
 </html>

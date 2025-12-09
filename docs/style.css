@@ -61,7 +61,9 @@
     .icono {
       height:80px; 
       width: auto;
+      transition: transform 0.2s ease-out;
     }
+  
 
     /* Layout principal */
     .contenido {
