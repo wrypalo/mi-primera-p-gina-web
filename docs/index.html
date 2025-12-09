@@ -386,5 +386,31 @@ document.addEventListener("scroll", () => {
 });
 </script>
 
+<script>
+window.addEventListener("scroll", () => {
+    const icon = document.querySelector(".icono-lateral");
+    const maxScroll = document.body.scrollHeight - window.innerHeight;
+    const progress = window.scrollY / maxScroll;
+
+    const maxMove = window.innerWidth - 120;
+    const x = progress * maxMove;
+
+    icon.style.transform = `translateX(${x}px)`;
+
+    // ✨ Crear brillitos
+    const brillo = document.createElement("div");
+    brillo.classList.add("brillito");
+
+    // posición del brillo
+    brillo.style.left = (x + 40) + "px"; // ajusta si quieres
+    brillo.style.top = "40px";
+
+    document.querySelector(".linea-scroll").appendChild(brillo);
+
+    // borrar brillo después de animación
+    setTimeout(() => brillo.remove(), 800);
+});
+</script>
+
 </body>
 </html>
