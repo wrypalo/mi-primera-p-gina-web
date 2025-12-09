@@ -32,7 +32,7 @@
   <!-- CONTENEDOR PRINCIPAL -->
   <main class="contenido">
 
-    <section class="seccion seccion-1">
+   <section class="seccion seccion-1" data-color="#8fa3cc">
 
       <div class="foto-inicial">
         <img src="inicio.png" alt="foto inicio">
@@ -40,7 +40,7 @@
 
     </section>
 
-    <section class="seccion seccion-2">
+  <section class="seccion seccion-2" data-color="#97A8D2"></section>
       <div class="parrafo inicio">
         <p>Para comprobar esta teoría recopilamos datos de las 65 ediciones del Festival de Viña del Mar realizadas entre 1960 y 2025, considerando variables como nacionalidad, género musical, artistas invitados, premios recibidos, entre otras. Durante este proceso, comenzaron a aparecer algunos patrones.</p>
 
@@ -141,10 +141,10 @@
         <p>Pero para comprender la importancia y trascendencia del Festival de Viña del Mar y por qué tiene un impacto tan significativo en la carrera de los artistas que se presentan en su escenario, hay que conocer dónde y cuándo nace.</p>
       </div>
 
-    </section>
+  </section>
   </main>
 
-  <section class="seccion seccion-3">
+  <section class="seccion seccion-3" data-color="#11102c">
 
     <div class="imagen-viña-antiguo">
       <img src="viña antiguo.png" alt="viña antiguo">
@@ -162,7 +162,7 @@
     </div>
   </section>
 
-  <section class="seccion seccion-4">
+  <section class="seccion seccion-4" data-color="#2e3566">
 
 
     <div class="separador lira">
@@ -224,7 +224,7 @@
 
   </section>
   
-  <section class="seccion seccion-5">
+  <section class="seccion seccion-5" data-color="#97A8D2">
 
   <div class="parrafo destacado">
     <p>Aunque Viña del Mar tiene el poder de impulsar a sus artistas, no todos reciben la misma oportunidad de brillar. El festival funciona como un espejo de la sociedad: históricamente, los hombres han concentrado la mayor visibilidad, mientras que las artistas femeninas han quedado en segundo plano</p>
@@ -300,7 +300,7 @@
   
   </section>
 
-  <section class="seccion seccion-6">
+  <section class="seccion seccion-6" data-color="#11102c">
 
     <div class="parrafo final">
 
@@ -427,13 +427,18 @@ window.addEventListener("scroll", () => {
 </script>
 
 <script>
-window.addEventListener("scroll", () => {
-  const maxScroll = document.body.scrollHeight - window.innerHeight;
-  const progreso = window.scrollY / maxScroll;
+const secciones = document.querySelectorAll(".seccion");
 
-  // Mover el gradiente según el scroll
-  document.body.style.backgroundPosition = `0 ${progreso * 100}%`;
-});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const color = entry.target.getAttribute("data-color");
+      document.body.style.backgroundColor = color;
+    }
+  });
+}, { threshold: 0.5 });
+
+secciones.forEach(sec => observer.observe(sec));
 </script>
 
 

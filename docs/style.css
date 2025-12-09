@@ -14,17 +14,10 @@ body {
   font-family: "Futura", sans-serif;
   padding-top: 84px;
 
-  background: linear-gradient(
-    #8fa3cc,
-    #97A8D2,
-    #11102c,
-    #2e3566,
-    #97A8D2,
-    #11102c
-  );
-  
-  background-attachment: fixed;
-  background-size: 100% 1500%; /* prueba con este número */
+  /* color inicial por si carga arriba */
+  background-color: #8fa3cc; 
+
+  transition: background-color 0.8s ease; /* transición suave */
 }
 
 .seccion-1,
