@@ -14,14 +14,27 @@
       font-family: "Futura", sans-serif;
       background-color: #97A8D2;
       padding-top: 84px; /* ajusta según la altura real de tu top-bar */
+
+        background: linear-gradient(
+    #8fa3cc,
+    #97A8D2,
+    #11102c,
+    #2e3566,
+    #97A8D2,
+    #11102c
+  );
+  background-attachment: fixed;
+  background-size: 100% 600%;
 }
 
-.seccion-1 { background: #8fa3cc; }
-.seccion-2 { background: #97A8D2; }
-.seccion-3 { background: #11102c; }
-.seccion-4 { background: #2e3566; }
-.seccion-5 { background: #97A8D2; }
-.seccion-6 { background: #11102c; }
+.seccion-1,
+.seccion-2,
+.seccion-3,
+.seccion-4,
+.seccion-5,
+.seccion-6 {
+  background: transparent;
+}
 
 /* Barra superior */
 .top-bar {
