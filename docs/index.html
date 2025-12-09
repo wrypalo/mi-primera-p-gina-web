@@ -432,11 +432,14 @@ const secciones = document.querySelectorAll(".seccion");
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const color = entry.target.dataset.color;
+      const color = entry.target.getAttribute("data-color");
       document.body.style.backgroundColor = color;
     }
   });
-}, { threshold: 0.15 });
+}, {
+  threshold: 0.1, // cambia al entrar un poquito
+  rootMargin: "-10% 0px -70% 0px"  // afina el momento exacto del cambio
+});
 
 secciones.forEach(sec => observer.observe(sec));
 </script>
