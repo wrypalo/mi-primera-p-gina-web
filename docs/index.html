@@ -426,5 +426,16 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
+<script>
+window.addEventListener("scroll", () => {
+  const maxScroll = document.body.scrollHeight - window.innerHeight;
+  const progreso = window.scrollY / maxScroll;
+
+  // Mover el gradiente según el scroll
+  document.body.style.backgroundPosition = `0 ${progreso * 100}%`;
+});
+</script>
+
+
 </body>
 </html>
