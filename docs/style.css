@@ -69,27 +69,48 @@
 
 .brillito {
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background: radial-gradient(circle, #ffe28a 0%, #ffcc3d 40%, transparent 70%);
-  border-radius: 50%;
+  width: 14px;
+  height: 14px;
   pointer-events: none;
-  filter: blur(1px);
-  opacity: 1;
-  animation: sparkleFade 0.9s ease-out forwards;
-  box-shadow: 
-      0 0 6px #ffdf70,
-      0 0 12px #ffcb3b,
-      0 0 18px #ffae00;
+  animation: sparkle 0.8s ease-out forwards;
+  opacity: 0.9;
 }
 
-@keyframes sparkleFade {
+/* Forma de estrellita usando sombras */
+.brillito::before,
+.brillito::after {
+  content: "";
+  position: absolute;
+  background: gold;
+  border-radius: 2px;
+}
+
+/* Línea vertical */
+.brillito::before {
+  width: 3px;
+  height: 14px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* Línea horizontal */
+.brillito::after {
+  width: 14px;
+  height: 3px;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* Animación */
+@keyframes sparkle {
   0% {
-    transform: scale(1.2);
+    transform: scale(0.4) rotate(0deg);
     opacity: 1;
   }
   100% {
-    transform: scale(0.3);
+    transform: scale(1.6) rotate(45deg);
     opacity: 0;
   }
 }
