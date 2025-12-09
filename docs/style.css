@@ -25,6 +25,10 @@ body {
   background-color: transparent !important;
 }
 
+.seccion {
+  min-height: 100vh;  /* cada sección = altura completa de la pantalla */
+  display: block;
+}
 /* Barra superior */
 .top-bar {
   position: fixed;
